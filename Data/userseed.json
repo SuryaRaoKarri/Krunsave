@@ -1,0 +1,44 @@
+[
+    {
+        "email": "admin@gmail.com",
+        "password": "admin",
+        "phoneNumber": "123456789",
+        "roleID": 1
+    },
+    {
+        "email": "manager1@gmail.com",
+        "password": "manager1",
+        "phoneNumber": "123456789",
+        "roleID": 2
+    },
+    {
+        "email": "manager2@gmail.com",
+        "password": "manager2",
+        "phoneNumber": "123456789",
+        "roleID": 2
+    },
+    {
+        "email": "manager3@gmail.com",
+        "password": "manager3",
+        "phoneNumber": "123456789",
+        "roleID": 2
+    },
+    {
+        "email": "user1@gmail.com",
+        "password": "user1",
+        "phoneNumber": "123456789",
+        "roleID": 3
+    },
+    {
+        "email": "user2@gmail.com",
+        "password": "user2",
+        "phoneNumber": "123456789",
+        "roleID": 3
+    },
+    {
+        "email": "user3@gmail.com",
+        "password": "user3",
+        "phoneNumber": "123456789",
+        "roleID": 3
+    }
+]

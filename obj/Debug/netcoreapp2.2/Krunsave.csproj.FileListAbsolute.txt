@@ -1,0 +1,14 @@
+D:\ProjectsMain\Krunsave\bin\Debug\netcoreapp2.2\Krunsave.deps.json
+D:\ProjectsMain\Krunsave\bin\Debug\netcoreapp2.2\Krunsave.runtimeconfig.json
+D:\ProjectsMain\Krunsave\bin\Debug\netcoreapp2.2\Krunsave.runtimeconfig.dev.json
+D:\ProjectsMain\Krunsave\bin\Debug\netcoreapp2.2\Krunsave.dll
+D:\ProjectsMain\Krunsave\bin\Debug\netcoreapp2.2\Krunsave.pdb
+D:\ProjectsMain\Krunsave\obj\Debug\netcoreapp2.2\Krunsave.csprojAssemblyReference.cache
+D:\ProjectsMain\Krunsave\obj\Debug\netcoreapp2.2\Krunsave.csproj.CoreCompileInputs.cache
+D:\ProjectsMain\Krunsave\obj\Debug\netcoreapp2.2\Krunsave.RazorAssemblyInfo.cache
+D:\ProjectsMain\Krunsave\obj\Debug\netcoreapp2.2\Krunsave.RazorAssemblyInfo.cs
+D:\ProjectsMain\Krunsave\obj\Debug\netcoreapp2.2\Krunsave.AssemblyInfoInputs.cache
+D:\ProjectsMain\Krunsave\obj\Debug\netcoreapp2.2\Krunsave.AssemblyInfo.cs
+D:\ProjectsMain\Krunsave\obj\Debug\netcoreapp2.2\Krunsave.RazorTargetAssemblyInfo.cache
+D:\ProjectsMain\Krunsave\obj\Debug\netcoreapp2.2\Krunsave.dll
+D:\ProjectsMain\Krunsave\obj\Debug\netcoreapp2.2\Krunsave.pdb

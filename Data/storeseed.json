@@ -1,0 +1,22 @@
+[
+    {
+        "storeName": "SnackBar",
+        "managerName": "Snackbarmanager",
+        "phoneNumber": "264810384",
+        "email": "snackbar@gmail.com",
+        "lat": "14.0779344",
+        "lng": "100.609899",
+        "userID": 1,
+        "storeTypeID": 1
+    },
+    {
+        "storeName": "7Eleven",
+        "managerName": "7Elevenmanager",
+        "phoneNumber": "264810384",
+        "email": "7Evelen@gmail.com",
+        "lat": "14.0781633",
+        "lng": "100.6086115",
+        "userID": 1,
+        "storeTypeID": 2
+    }
+]
