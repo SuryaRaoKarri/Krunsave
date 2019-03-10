@@ -1,8 +1,8 @@
 using System.Collections.Generic;
-using Krunsaveapp.Model;
+using Krunsave.Model;
 using Newtonsoft.Json;
 
-namespace Krunsaveapp.Data
+namespace Krunsave.Data
 {
     public class Seed
     {

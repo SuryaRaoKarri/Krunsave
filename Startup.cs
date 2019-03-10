@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
-using Krunsaveapp.Data;
+using Krunsave.Data;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
@@ -13,7 +13,7 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.Options;
 
-namespace Krunsaveapp
+namespace Krunsave
 {
     public class Startup
     {
@@ -31,6 +31,7 @@ namespace Krunsaveapp
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_2);
             services.AddCors();
             services.AddScoped<IAuthenticationRepository, AuthenticationRepository>(); //Service is create once per http request
+            services.AddScoped<IStoreinfoRepository, StoreinfoRepository>();
             services.AddTransient<Seed>(); //Service creates one instance in one request
         }
 
@@ -46,7 +47,7 @@ namespace Krunsaveapp
                 // The default HSTS value is 30 days. You may want to change this for production scenarios, see https://aka.ms/aspnetcore-hsts.
                 app.UseHsts();
             }
-            seeder.Seedusers();
+            //seeder.Seedusers();
             app.UseHttpsRedirection();
             app.UseMvc();
         }

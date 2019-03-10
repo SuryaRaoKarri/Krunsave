@@ -1,4 +1,4 @@
-namespace Krunsaveapp.Model
+namespace Krunsave.Model
 {
     public class Availablefoodtag
     {

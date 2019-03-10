@@ -17,7 +17,7 @@
         "ASPNETCORE_ENVIRONMENT": "Development"
       }
     },
-    "Krunsaveapp": {
+    "Krunsave": {
       "commandName": "Project",
       "launchBrowser": false,
       "launchUrl": "api/values",

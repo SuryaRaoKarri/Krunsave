@@ -1,10 +1,10 @@
 using System.Threading.Tasks;
-using Krunsaveapp.Data;
-using Krunsaveapp.DTO;
-using Krunsaveapp.Model;
+using Krunsave.Data;
+using Krunsave.DTO;
+using Krunsave.Model;
 using Microsoft.AspNetCore.Mvc;
 
-namespace Krunsaveapp.Controllers
+namespace Krunsave.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]

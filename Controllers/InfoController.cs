@@ -2,19 +2,21 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
-using Krunsaveapp.Data;
+using Krunsave.Data;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 
-namespace Krunsaveapp.Controllers
+namespace Krunsave.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
     public class InfoController : ControllerBase
     {
-        public readonly IAuthenticationRepository _repo;
-        public InfoController(IAuthenticationRepository repo){
-            _repo = repo;
+       // public readonly IAuthenticationRepository _authrepo;
+        public readonly IStoreinfoRepository _storeinforepo;
+        public InfoController( IStoreinfoRepository storeinforepo){
+           // _authrepo = authrepo;
+            _storeinforepo = storeinforepo;
         }
 
         // GET api/values
@@ -30,7 +32,7 @@ namespace Krunsaveapp.Controllers
         [HttpGet("{lat}/{lng}")]
         public async Task<IActionResult> Get(string lat, string lng)
         {
-            var distance = await _repo.GetDistance(lat, lng);
+            var distance = await _storeinforepo.GetDistance(lat, lng);
             return Ok(distance);
         }
 

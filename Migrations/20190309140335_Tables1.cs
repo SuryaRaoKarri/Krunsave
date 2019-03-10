@@ -3,7 +3,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 
 namespace Krunsave.Migrations
 {
-    public partial class InitialTables : Migration
+    public partial class Tables1 : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {

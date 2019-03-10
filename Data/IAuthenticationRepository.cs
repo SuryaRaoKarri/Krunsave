@@ -1,14 +1,14 @@
 using System.Collections.Generic;
 using System.Threading.Tasks;
-using Krunsaveapp.DTO;
-using Krunsaveapp.Model;
+using Krunsave.DTO;
+using Krunsave.Model;
 using Microsoft.AspNetCore.Mvc;
 
-namespace Krunsaveapp.Data
+namespace Krunsave.Data
 {
     public interface IAuthenticationRepository
     {
-        Task<List<Userstore>> GetDistance(string lat, string lng);
+        
 
         Task<User> RegisterUser(User user, string password); 
 

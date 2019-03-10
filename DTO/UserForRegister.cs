@@ -1,6 +1,6 @@
 using System.ComponentModel.DataAnnotations;
 
-namespace Krunsaveapp.DTO
+namespace Krunsave.DTO
 {
     public class UserForRegisterDto
     {

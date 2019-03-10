@@ -1,7 +1,7 @@
-using Krunsaveapp.Model;
+using Krunsave.Model;
 using Microsoft.EntityFrameworkCore;
 
-namespace Krunsaveapp.Data
+namespace Krunsave.Data
 {
     public class DataContext : DbContext
     {

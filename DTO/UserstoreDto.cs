@@ -1,6 +1,6 @@
-namespace Krunsaveapp.DTO
+namespace Krunsave.DTO
 {
-    public class Userstore
+    public class UserstoreDto
     {
         public int storeID {get;set;}
         public decimal lat {get; set;}

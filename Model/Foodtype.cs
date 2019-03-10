@@ -1,6 +1,6 @@
 using System.ComponentModel.DataAnnotations;
 
-namespace Krunsaveapp.Model
+namespace Krunsave.Model
 {
     public class Foodtype
     {
