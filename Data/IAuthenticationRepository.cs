@@ -10,7 +10,7 @@ namespace Krunsave.Data
     {
         
 
-        Task<User> RegisterUser(User user, string password); 
+        Task<bool> RegisterUser(UserForRegisterDto userForRegisterDto); 
 
         Task<User> Login(string username, string password);
 

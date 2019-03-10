@@ -41,17 +41,28 @@ namespace Krunsave.Data
             return true;
         }
 
-        public async Task<User> RegisterUser(User user, string password)
+        public async Task<bool> RegisterUser(UserForRegisterDto userForRegisterDto)
         {
             byte[] passwordHash, passwordSalt;
-            CreatePasswordHash(password, out passwordHash, out passwordSalt);
-            user.passwordHash = passwordHash;
-            user.passwordSalt = passwordSalt;
-            user.roleID = 1;
-            await _context.Users.AddAsync(user);
-            await _context.SaveChangesAsync();
-            return user;
+            //Convert the Password to Hash Password
+            CreatePasswordHash(userForRegisterDto.password, out passwordHash, out passwordSalt);
+            //Get the roleID
+            var roles = await _context.Roles.FirstOrDefaultAsync(r => r.roleName == userForRegisterDto.rolename);
+            if(roles != null){
+                //Update the User Model
+                var user = new User();
+                user.email = userForRegisterDto.email;
+                user.phoneNumber = userForRegisterDto.phoneNumber;
+                user.passwordHash = passwordHash;
+                user.passwordSalt = passwordSalt;
+                user.roleID = roles.roleID;
+                await _context.Users.AddAsync(user);
+                await _context.SaveChangesAsync();
+                return true;
+            }
+            return false;
         }
+
 
         private void CreatePasswordHash(string password, out byte[] passwordHash, out byte[] passwordSalt)
         {
