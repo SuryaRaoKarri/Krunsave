@@ -1,5 +1,5 @@
 using System.Threading.Tasks;
-using Krunsave.Data;
+using Krunsave.Data.IRepository;
 using Krunsave.DTO;
 using Krunsave.Model;
 using Microsoft.AspNetCore.Mvc;
@@ -20,7 +20,7 @@ namespace Krunsave.Controllers
         {
             userForRegister.email = userForRegister.email.ToLower();
             if(await _repo.UserExists(userForRegister.email)) return BadRequest("Username Already Exists");
-            if(!await _repo.RegisterUser (userForRegister)) return BadRequest("Something Went Wrong");
+            if(!await _repo.RegisterUser(userForRegister)) return BadRequest("Something Went Wrong");
             return StatusCode(201);
         }
 

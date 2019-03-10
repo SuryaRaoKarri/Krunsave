@@ -2,12 +2,13 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Krunsave.Data.IRepository;
 using Krunsave.DTO;
 using Krunsave.Model;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 
-namespace Krunsave.Data
+namespace Krunsave.Data.Repository
 {
     public class AuthenticationRepository : IAuthenticationRepository
     {

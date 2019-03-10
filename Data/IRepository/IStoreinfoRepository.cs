@@ -2,7 +2,7 @@ using System.Collections.Generic;
 using System.Threading.Tasks;
 using Krunsave.DTO;
 
-namespace Krunsave.Data
+namespace Krunsave.Data.IRepository
 {
     public interface IStoreinfoRepository
     {

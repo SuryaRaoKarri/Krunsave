@@ -4,7 +4,7 @@ using Krunsave.DTO;
 using Krunsave.Model;
 using Microsoft.AspNetCore.Mvc;
 
-namespace Krunsave.Data
+namespace Krunsave.Data.IRepository
 {
     public interface IAuthenticationRepository
     {

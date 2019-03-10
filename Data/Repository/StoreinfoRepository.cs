@@ -2,10 +2,11 @@ using System;
 using System.Collections.Generic;
 using System.Threading.Tasks;
 using Krunsave.Data;
+using Krunsave.Data.IRepository;
 using Krunsave.DTO;
 using Microsoft.EntityFrameworkCore;
 
-namespace Krunsave.Data
+namespace Krunsave.Data.Repository
 {
     public class StoreinfoRepository : IStoreinfoRepository
     {
