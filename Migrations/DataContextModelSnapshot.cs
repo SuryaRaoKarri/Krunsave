@@ -21,27 +21,27 @@ namespace Krunsave.Migrations
                     b.Property<int>("availableFoodID")
                         .ValueGeneratedOnAdd();
 
-                    b.Property<int>("availableUnits");
+                    b.Property<int?>("availableUnits");
 
                     b.Property<string>("cookedDate");
 
                     b.Property<string>("description");
 
-                    b.Property<int>("discountPerUnit");
+                    b.Property<int?>("discountPerUnit");
 
                     b.Property<string>("engName");
 
                     b.Property<string>("expiryDate");
 
-                    b.Property<int>("foodTypeID");
+                    b.Property<int?>("foodTypeID");
 
-                    b.Property<int>("pricePerUnit");
+                    b.Property<int?>("pricePerUnit");
 
                     b.Property<int>("storeID");
 
                     b.Property<string>("thaiName");
 
-                    b.Property<int>("totalUnits");
+                    b.Property<int?>("totalUnits");
 
                     b.Property<string>("unitType");
 

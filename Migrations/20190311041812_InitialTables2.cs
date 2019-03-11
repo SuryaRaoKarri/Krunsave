@@ -3,7 +3,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 
 namespace Krunsave.Migrations
 {
-    public partial class Tables1 : Migration
+    public partial class InitialTables2 : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
@@ -131,15 +131,15 @@ namespace Krunsave.Migrations
                         .Annotation("Sqlite:Autoincrement", true),
                     engName = table.Column<string>(nullable: true),
                     thaiName = table.Column<string>(nullable: true),
-                    totalUnits = table.Column<int>(nullable: false),
+                    totalUnits = table.Column<int>(nullable: true),
                     unitType = table.Column<string>(nullable: true),
-                    availableUnits = table.Column<int>(nullable: false),
-                    discountPerUnit = table.Column<int>(nullable: false),
-                    pricePerUnit = table.Column<int>(nullable: false),
+                    availableUnits = table.Column<int>(nullable: true),
+                    discountPerUnit = table.Column<int>(nullable: true),
+                    pricePerUnit = table.Column<int>(nullable: true),
                     cookedDate = table.Column<string>(nullable: true),
                     expiryDate = table.Column<string>(nullable: true),
                     description = table.Column<string>(nullable: true),
-                    foodTypeID = table.Column<int>(nullable: false),
+                    foodTypeID = table.Column<int>(nullable: true),
                     storeID = table.Column<int>(nullable: false)
                 },
                 constraints: table =>

@@ -1,12 +1,7 @@
-using System.Collections.Generic;
-using System.ComponentModel.DataAnnotations;
-
-namespace Krunsave.Model
+namespace Krunsave.DTO
 {
-    public class Availablefood
+    public class FoodForRegister
     {
-        [Key]
-        public int availableFoodID {get; set;}
         public string engName {get; set;}
         public string thaiName {get; set;}
         public int? totalUnits {get; set;}
@@ -18,11 +13,6 @@ namespace Krunsave.Model
         public string expiryDate {get; set;}
         public string description {get; set;}
         public int? foodTypeID {get; set;}
-        public Store store {get; set;}
         public int storeID {get; set;}
-
-     //   public ICollection<Availablefoodtag> aFoodTags {get; set;}
-        public ICollection<Userview> userview {get; set;}
-
     }
 }
