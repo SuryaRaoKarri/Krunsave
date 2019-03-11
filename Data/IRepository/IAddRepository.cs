@@ -5,8 +5,9 @@ using Krunsave.Model;
 
 namespace Krunsave.Data.IRepository
 {
-    public interface IAddStoreRepository
+    public interface IAddRepository
     {
         Task<bool> Addstore(StoreForRegisterDto store);
+        Task<bool> AddAvailableFood(FoodForRegisterDto foodForRegisterDto);
     }
 }

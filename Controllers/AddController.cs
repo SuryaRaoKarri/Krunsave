@@ -10,16 +10,23 @@ namespace Krunsave.Controllers
     [ApiController]
     public class AddController : ControllerBase
     {
-        private readonly IAddStoreRepository _addstorerepo;
-        public AddController(IAddStoreRepository addstorerepo){
-            _addstorerepo = addstorerepo;
+        private readonly IAddRepository _addrepo;
+        public AddController(IAddRepository addrepo){
+            _addrepo = addrepo;
         }
         
         [HttpPost("addstore")]
         public async Task<IActionResult> Add(StoreForRegisterDto store){
 
-            if(! await _addstorerepo.Addstore(store)) return BadRequest("Store unable to add.");
+            if(! await _addrepo.Addstore(store)) return BadRequest("Store unable to add.");
             return Ok(201); 
+        }
+
+        [HttpPost("addfood")]
+        public async Task<IActionResult> Addfood(FoodForRegisterDto foodForRegisterDto){
+
+            if(! await _addrepo.AddAvailableFood(foodForRegisterDto)) return BadRequest("Dish unable to add.");
+            return Ok(foodForRegisterDto); 
         }
     }
 }

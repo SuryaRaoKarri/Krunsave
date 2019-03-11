@@ -1,6 +1,6 @@
 namespace Krunsave.DTO
 {
-    public class FoodForRegister
+    public class FoodForRegisterDto
     {
         public string engName {get; set;}
         public string thaiName {get; set;}
