@@ -15,7 +15,8 @@ namespace Krunsave.Data.Repository
         public async Task<Store> Editstore(Store store)
         {
             var storedetails = await _context.Stores.FirstOrDefaultAsync(s => s.storeID == store.storeID);
-            storedetails = store;
+            storedetails.storeName = "Snack Bar";
+           // _context.Stores.Update(storedetails);
             _context.SaveChanges();
             return storedetails;
         }
