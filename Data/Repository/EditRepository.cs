@@ -12,12 +12,12 @@ namespace Krunsave.Data.Repository
             _context = context;
         }
 
-        public async Task<bool> Editstore(Store store)
+        public async Task<Store> Editstore(Store store)
         {
             var storedetails = await _context.Stores.FirstOrDefaultAsync(s => s.storeID == store.storeID);
             storedetails = store;
             _context.SaveChanges();
-            return true;
+            return storedetails;
         }
     }
 }

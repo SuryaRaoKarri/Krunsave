@@ -35,6 +35,7 @@ namespace Krunsave
             services.AddScoped<IAuthenticationRepository, AuthenticationRepository>(); //Service is create once per http request
             services.AddScoped<IStoreinfoRepository, StoreinfoRepository>();
             services.AddScoped<IAddRepository, AddRepository>();
+            services.AddScoped<IEditRepository, EditRepository>();
             services.AddTransient<Seed>(); //Service creates one instance in one request
         }
 
