@@ -18,13 +18,13 @@ namespace Krunsave.Data.Repository
             _context = context;
         }
        
-        public async Task<User> Login(string username, string password)
+        public async Task<User> Login(UserForLoginDto userForLoginDto)
         {
-            var user = await _context.Users.FirstOrDefaultAsync(x => x.email == username);
+            var user = await _context.Users.FirstOrDefaultAsync(x => x.email == userForLoginDto.email);
 
             if(user == null) return null; // Will return 401 unauthorize in the controller
 
-            if(!VerifyPasswordHash(password, user.passwordHash, user.passwordSalt)) return null;
+            if(!VerifyPasswordHash(userForLoginDto.password, user.passwordHash, user.passwordSalt)) return null;
 
             return user;
         }

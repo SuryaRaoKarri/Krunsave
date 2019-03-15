@@ -12,7 +12,7 @@ namespace Krunsave.Data.IRepository
 
         Task<bool> RegisterUser(UserForRegisterDto userForRegisterDto); 
 
-        Task<User> Login(string username, string password);
+        Task<User> Login(UserForLoginDto userForLoginDto);
 
         Task<bool> UserExists(string username);
     }
