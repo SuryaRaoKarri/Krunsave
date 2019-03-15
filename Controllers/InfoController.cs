@@ -1,6 +1,7 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Security.Claims;
 using System.Threading.Tasks;
 using Krunsave.Data;
 using Krunsave.Data.IRepository;
@@ -10,7 +11,7 @@ using Microsoft.EntityFrameworkCore;
 
 namespace Krunsave.Controllers
 {
-    [Authorize]
+    [Authorize(Roles="admin")]
     [Route("api/[controller]")]
     [ApiController]
     public class InfoController : ControllerBase
@@ -36,7 +37,8 @@ namespace Krunsave.Controllers
         public async Task<IActionResult> Get(string lat, string lng)
         {
             var distance = await _storeinforepo.GetDistance(lat, lng);
-            return Ok(distance);
+            var rest = User.Claims.First(i => i.Type == "userID").Value;
+            return Ok(rest);
         }
 
         // POST api/values

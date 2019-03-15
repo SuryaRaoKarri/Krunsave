@@ -41,7 +41,9 @@ namespace Krunsave.Controllers
             var claims = new[]
             {
                 new Claim(ClaimTypes.NameIdentifier, userFromRepo.userID.ToString()),
-                new Claim(ClaimTypes.Name, userFromRepo.email)
+                new Claim(ClaimTypes.Name, userFromRepo.email),
+                new Claim(ClaimTypes.Role, "admin"),
+                new Claim("userID", "8")
             };
 
             var key = new SymmetricSecurityKey(Encoding.UTF8
