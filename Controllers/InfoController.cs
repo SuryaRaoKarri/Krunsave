@@ -11,11 +11,12 @@ using Microsoft.EntityFrameworkCore;
 
 namespace Krunsave.Controllers
 {
-    [Authorize(Roles="admin")]
+
     [Route("api/[controller]")]
     [ApiController]
     public class InfoController : ControllerBase
     {
+
        // public readonly IAuthenticationRepository _authrepo;
         public readonly IStoreinfoRepository _storeinforepo;
         public InfoController( IStoreinfoRepository storeinforepo){
@@ -23,16 +24,6 @@ namespace Krunsave.Controllers
             _storeinforepo = storeinforepo;
         }
 
-        // GET api/values
-        // [HttpGet]
-        // public async Task<IActionResult> GetInfo()
-        // {
-        //     var allStores =await  _context.Stores.ToListAsync();
-        //     return Ok(allStores); 
-        //    // return new string[] { "value1", "value2" };
-        // }
-
-        // GET api/values/5
         [HttpGet("{lat}/{lng}")]
         public async Task<IActionResult> Get(string lat, string lng)
         {
@@ -42,25 +33,9 @@ namespace Krunsave.Controllers
             //return Ok(identity.Name);
             var roles = identity.Claims.Where(c => c.Type == "userID").Select(c => c.Value);
             //return Ok(roles);
+            distance = distance.OrderBy(o=>o.dist).ToList();
             return Ok(distance);
         }
 
-        // POST api/values
-        [HttpPost]
-        public void Post([FromBody] string value)
-        {
-        }
-
-        // PUT api/values/5
-        [HttpPut("{id}")]
-        public void Put(int id, [FromBody] string value)
-        {
-        }
-
-        // DELETE api/values/5
-        [HttpDelete("{id}")]
-        public void Delete(int id)
-        {
-        }
     }
 }

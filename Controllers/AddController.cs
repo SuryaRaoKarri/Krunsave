@@ -2,10 +2,12 @@ using System.Threading.Tasks;
 using Krunsave.Data.IRepository;
 using Krunsave.DTO;
 using Krunsave.Model;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
 namespace Krunsave.Controllers
 {
+    [Authorize(Roles="manager")]
     [Route("api/[controller]")]
     [ApiController]
     public class AddController : ControllerBase
