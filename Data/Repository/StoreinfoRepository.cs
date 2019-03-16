@@ -37,11 +37,15 @@ namespace Krunsave.Data.Repository
             dist = Math.Acos(dist);
             dist = dist*180/Math.PI;
             dist = dist*60*1.1515;
-            //Userstore userstore = new Userstore();
-            userstore.Add(new UserstoreDto{ storeID=allStores.storeID, lat=allStores.lat, lng=allStores.lng, dist= dist*V});
-            // userstore.Add();
-            // userstore.Add(allStores.lng);
-            // userstore.Add((dist* V);
+            userstore.Add(
+                new UserstoreDto{ 
+                    storeID=allStores.storeID,
+                    storeName=allStores.storeName,
+                    address=allStores.address,
+                    lat=allStores.lat,
+                    lng=allStores.lng,
+                    dist= System.Math.Round(dist*V,2)
+                    });
             }
             return userstore;
         }

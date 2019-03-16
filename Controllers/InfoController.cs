@@ -17,10 +17,8 @@ namespace Krunsave.Controllers
     public class InfoController : ControllerBase
     {
 
-       // public readonly IAuthenticationRepository _authrepo;
         public readonly IStoreinfoRepository _storeinforepo;
         public InfoController( IStoreinfoRepository storeinforepo){
-           // _authrepo = authrepo;
             _storeinforepo = storeinforepo;
         }
 
