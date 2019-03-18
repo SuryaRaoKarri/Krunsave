@@ -35,5 +35,11 @@ namespace Krunsave.Controllers
             return Ok(distance);
         }
 
+        [HttpGet("{storeid}")]
+        public async Task<IActionResult> GetFoodITems(int storeid){
+            var FoodItems = await _storeinforepo.FoodInfo(storeid);
+            return Ok(FoodItems);
+        }
+
     }
 }
